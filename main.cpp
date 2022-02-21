@@ -1,18 +1,16 @@
 #include <iostream>
+#include <cstdlib>
+#include "sam.h"
 using namespace std;
 int main() {
-    cout << "Hi Samantha and bhara" << endl;
-    cout << "HI" << endl;
-    cout << "Hi I Am Bhara" << endl;
-    cout << "Iam so confused" << endl;
-    cout << "Hi this is someone again" <<endl;
-    cout << "testing this again" << endl;
-    cout << "MushfiqurR testing the line" <<endl;
-    cout << "MushfiqurRahman1 testing the line" <<endl;
 
-    cout << "ok lets go" << endl;
-    // Guys just try to print out saying Hi I am Samantha or Bhara if you are bhara :)
-    // So that we can get a feel of how version control works
-    // Thank you
+    movieRecord("0001", "3D", "John Wick", "Action", "Hall 1", 20.00, 20);
+    movieRecord("0002", "2D", "Ocean's 8", "Comedy", "Hall 5", 15.00, 25);
+    movieRecord("0003","3D",  "Malignant", "Horror", "Hall 2", 20.00, 10);
+    movieRecord("0004", "2D", "The Purge", "Horror", "Hall 3", 15.00, 18);
+
+    displayMovieRecord();
     return 0;
 }
+
+

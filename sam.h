@@ -1,21 +1,12 @@
 //
-// Created by Mushfiqur on 2/16/2022.
+// Created by Mushfiqur on 2/21/2022.
 //
 
-#ifndef DSTR_ASSIGNMENT_SAMANTHA_H
-#define DSTR_ASSIGNMENT_SAMANTHA_H
-
-#endif //DSTR_ASSIGNMENT_SAMANTHA_H
-
-
-//Samantha your code goes here
+#ifndef DSTR_ASSIGNMENT_SAM_H
+#define DSTR_ASSIGNMENT_SAM_H
 #include <iostream>
 #include <cstdlib>
 using namespace std;
-
-class addDisplay{
-
-
 struct movieInfo { //creates a template for a node
     string mID, mName, mType, mGenre, mHall;
     int mPrice, mQuantity;
@@ -41,13 +32,19 @@ void displayMovieRecord() {
     struct movieInfo* displayMovie;
     displayMovie = head;
     if (displayMovie == NULL) {
-        cout << "No movie record found\n"; }
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  |                                              NO MOVIES FOUND                                              |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+    }
 
-
-
-//header to display movie details cout << " +-----------------------------------------------------------------------------------------------------------+\n"; cout << " | NOW SHOWING |\n"; cout << " +-----------------------------------------------------------------------------------------------------------+\n"; cout << " | Movie ID | | Type | | Movie Name | | Genre | | Hall No. | | Price (RM) | | Quantity |\n"; cout << " +-----------------------------------------------------------------------------------------------------------+";
+//header to display movie details
+    cout << " +-----------------------------------------------------------------------------------------------------------+\n"; cout << " | NOW SHOWING |\n"; cout << " +-----------------------------------------------------------------------------------------------------------+\n"; cout << " | Movie ID | | Type | | Movie Name | | Genre | | Hall No. | | Price (RM) | | Quantity |\n"; cout << " +-----------------------------------------------------------------------------------------------------------+";
     while (displayMovie != NULL) {
         cout << "\n | " << displayMovie->mID << " | | " << displayMovie->mType << " | | " << displayMovie->mName << " | | " << displayMovie->mGenre << " | | " << displayMovie->mHall << " | | " << displayMovie->mPrice << " | | " << displayMovie->mQuantity << " |" << endl;
-//continue looking for the next node that holds movie info displayMovie = displayMovie->next; }
+//continue looking for the next node that holds movie info
+        displayMovie = displayMovie->next;
+
         cout << " +-----------------------------------------------------------------------------------------------------------+\n"; }
-    };
+};
+
+#endif //DSTR_ASSIGNMENT_SAM_H
