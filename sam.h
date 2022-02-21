@@ -59,7 +59,7 @@ void displayMovieRecord() {
              "   |    |  " << displayMovie->mGenre <<
              " |    |  " << displayMovie->mHall <<
              "  |    |     "     << displayMovie->mPrice <<
-             "     |    |    " << displayMovie->mQuantity << "    |\n" << endl;
+             "     |    |    " << displayMovie->mQuantity << "    |" << endl;
 
         //continue looking for the next node that holds movie info
         displayMovie = displayMovie->next;
