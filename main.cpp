@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include "sam.h"
+#include "Mushfiqur.h"
 using namespace std;
 int main() {
 
