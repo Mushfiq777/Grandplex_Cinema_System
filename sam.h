@@ -50,10 +50,10 @@ void displayMovieRecord() {
     cout << "  |                                               NOW SHOWING                                                 |\n";
     cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
     cout << "  | Movie ID |    | Type |    |  Movie Name  |    |  Genre  |    | Hall No. |    | Price (RM) |    | Quantity |\n";
-    cout << "  +-----------------------------------------------------------------------------------------------------------+";
+    cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
 
     while (displayMovie != NULL) {
-        cout << "\n  |   " << displayMovie->mID <<
+        cout << "  |   " << displayMovie->mID <<
              "   |    |  " << displayMovie->mType <<
              "  |    |  " << displayMovie->mName <<
              "   |    |  " << displayMovie->mGenre <<
