@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/bhara1/CLionProjects/DSTR_assignment/main.cpp" "CMakeFiles/DSTR_assignment.dir/main.cpp.obj" "gcc" "CMakeFiles/DSTR_assignment.dir/main.cpp.obj.d"
+  "C:/Users/User/CLionProjects/DSTR_assignment/main.cpp" "CMakeFiles/DSTR_assignment.dir/main.cpp.obj" "gcc" "CMakeFiles/DSTR_assignment.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links.
