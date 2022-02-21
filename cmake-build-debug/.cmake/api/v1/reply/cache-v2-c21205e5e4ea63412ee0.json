@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug"
+			"value" : "c:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -79,7 +79,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "21"
+			"value" : "20"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "1"
+			"value" : "2"
 		},
 		{
 			"name" : "CMAKE_CODEBLOCKS_COMPILER_ID",
@@ -155,7 +155,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files/JetBrains/CLion 2021.3.3/bin/cmake/win/bin/cmake.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2021.2.3/bin/cmake/win/bin/cmake.exe"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -167,7 +167,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files/JetBrains/CLion 2021.3.3/bin/cmake/win/bin/cpack.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2021.2.3/bin/cmake/win/bin/cpack.exe"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -179,7 +179,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files/JetBrains/CLion 2021.3.3/bin/cmake/win/bin/ctest.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2021.2.3/bin/cmake/win/bin/ctest.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -470,6 +470,18 @@
 			"value" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32"
 		},
 		{
+			"name" : "CMAKE_DEPENDS_USE_COMPILER",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "No help, variable specified on the command line."
+				}
+			],
+			"type" : "UNINITIALIZED",
+			"value" : "FALSE"
+		},
+		{
 			"name" : "CMAKE_DLLTOOL",
 			"properties" : 
 			[
@@ -707,7 +719,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/User/CLionProjects/DSTR_assignment"
+			"value" : "C:/Users/mushf/CLionProjects/DSTR_assignment"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1091,7 +1103,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files/JetBrains/CLion 2021.3.3/bin/cmake/win/share/cmake-3.21"
+			"value" : "C:/Program Files/JetBrains/CLion 2021.2.3/bin/cmake/win/share/cmake-3.20"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1327,19 +1339,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug"
-		},
-		{
-			"name" : "DSTR_assignment_IS_TOP_LEVEL",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "ON"
+			"value" : "C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug"
 		},
 		{
 			"name" : "DSTR_assignment_SOURCE_DIR",
@@ -1351,7 +1351,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/User/CLionProjects/DSTR_assignment"
+			"value" : "C:/Users/mushf/CLionProjects/DSTR_assignment"
 		}
 	],
 	"kind" : "cache",
