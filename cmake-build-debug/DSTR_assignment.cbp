@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug"/>
+				<Option working_dir="C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="DSTR_assignment">
-				<Option output="C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug/DSTR_assignment.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug"/>
+				<Option output="C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug/DSTR_assignment.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -32,15 +32,15 @@
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 DSTR_assignment"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 DSTR_assignment"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="DSTR_assignment/fast">
-				<Option output="C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug/DSTR_assignment.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug"/>
+				<Option output="C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug/DSTR_assignment.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,46 +53,46 @@
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 DSTR_assignment/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 DSTR_assignment/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug"/>
+				<Option working_dir="C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug"/>
+				<Option working_dir="C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/mushf/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/User/CLionProjects/DSTR_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/mushf/CLionProjects/DSTR_assignment/Bhara.h">
+		<Unit filename="C:/Users/User/CLionProjects/DSTR_assignment/Bhara.h">
 			<Option target="DSTR_assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/mushf/CLionProjects/DSTR_assignment/Mushfiqur.h">
+		<Unit filename="C:/Users/User/CLionProjects/DSTR_assignment/Mushfiqur.h">
 			<Option target="DSTR_assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/mushf/CLionProjects/DSTR_assignment/main.cpp">
+		<Unit filename="C:/Users/User/CLionProjects/DSTR_assignment/main.cpp">
 			<Option target="DSTR_assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/mushf/CLionProjects/DSTR_assignment/sam.h">
+		<Unit filename="C:/Users/User/CLionProjects/DSTR_assignment/sam.h">
 			<Option target="DSTR_assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/mushf/CLionProjects/DSTR_assignment/CMakeLists.txt">
+		<Unit filename="C:/Users/User/CLionProjects/DSTR_assignment/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
