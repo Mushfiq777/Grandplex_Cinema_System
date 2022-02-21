@@ -11,6 +11,7 @@ int main() {
     movieRecord("0004", "2D", "The Purge", "Horror", "Hall 3", 15.00, 18);
 
     displayMovieRecord();
+//    searchRecord();
     return 0;
 }
 
