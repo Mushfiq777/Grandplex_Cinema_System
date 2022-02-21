@@ -44,27 +44,28 @@ void displayMovieRecord() {
         cout << "  |                                              NO MOVIES FOUND                                              |\n";
         cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
     }
+    else {
+        //header to display movie details
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  |                                               NOW SHOWING                                                 |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  | Movie ID |    | Type |    |  Movie Name  |    |  Genre  |    | Hall No. |    | Price (RM) |    | Quantity |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
 
-    //header to display movie details
-    cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
-    cout << "  |                                               NOW SHOWING                                                 |\n";
-    cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
-    cout << "  | Movie ID |    | Type |    |  Movie Name  |    |  Genre  |    | Hall No. |    | Price (RM) |    | Quantity |\n";
-    cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        while (displayMovie != NULL) {
+            cout << "  |   " << displayMovie->mID <<
+                 "   |    |  " << displayMovie->mType <<
+                 "  |    |  " << displayMovie->mName <<
+                 "   |    |  " << displayMovie->mGenre <<
+                 " |    |  " << displayMovie->mHall <<
+                 "  |    |     "     << displayMovie->mPrice <<
+                 "     |    |    " << displayMovie->mQuantity << "    |" << endl;
 
-    while (displayMovie != NULL) {
-        cout << "  |   " << displayMovie->mID <<
-             "   |    |  " << displayMovie->mType <<
-             "  |    |  " << displayMovie->mName <<
-             "   |    |  " << displayMovie->mGenre <<
-             " |    |  " << displayMovie->mHall <<
-             "  |    |     "     << displayMovie->mPrice <<
-             "     |    |    " << displayMovie->mQuantity << "    |" << endl;
-
-        //continue looking for the next node that holds movie info
-        displayMovie = displayMovie->next;
+            //continue looking for the next node that holds movie info
+            displayMovie = displayMovie->next;
+        }
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
     }
-    cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
 }
 
 #endif //DSTR_ASSIGNMENT_SAM_H
