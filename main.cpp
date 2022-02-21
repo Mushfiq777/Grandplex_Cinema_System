@@ -9,9 +9,14 @@ int main() {
     movieRecord("0002", "2D", "Ocean's 8", "Comedy", "Hall 5", 15.00, 25);
     movieRecord("0003","3D",  "Malignant", "Horror", "Hall 2", 20.00, 10);
     movieRecord("0004", "2D", "The Purge", "Horror", "Hall 3", 15.00, 18);
-
+    movieRecord("0005","3D","Ice Age 4","Comedy","Hall 4",10.00,22);
+    movieRecord("0006","3D","Spiderman","Action","Hall 4",12.00,25);
     displayMovieRecord();
+//    filter();
 //    searchRecord();
+    update();
+    displayMovieRecord();
+
     return 0;
 }
 
