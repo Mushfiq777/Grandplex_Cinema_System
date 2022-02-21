@@ -1,9 +1,9 @@
 #include <iostream>
-#include_next "Samantha .h"
+#include <cstdlib>
+#include "sam.h"
 using namespace std;
-
 int main() {
-    //Hardcoded movie list
+
     movieRecord("0001", "3D", "John Wick", "Action", "Hall 1", 20.00, 20);
     movieRecord("0002", "2D", "Ocean's 8", "Comedy", "Hall 5", 15.00, 25);
     movieRecord("0003","3D",  "Malignant", "Horror", "Hall 2", 20.00, 10);
@@ -12,3 +12,5 @@ int main() {
     displayMovieRecord();
     return 0;
 }
+
+
