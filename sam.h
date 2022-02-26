@@ -15,7 +15,7 @@ struct movieInfo { //creates a template for a node
 
 struct movieInfo* head = NULL;
 
-void movieRecord(string mID, string mType, string mName, string mGenre, string mHall, int mPrice, int mQuantity) {
+void movieRecord(string mID, string mType, string mName, string mGenre, string mHall, int mPrice, int mQuantity) { //creates new movie record (hardcoded)
     //adds a new movie record
     struct movieInfo* newMovie = new struct movieInfo;
 
@@ -34,7 +34,7 @@ void movieRecord(string mID, string mType, string mName, string mGenre, string m
     head = newMovie;
 }
 
-void addNewMovie() {
+void addNewMovie() { //accepts new movie record from user
     struct movieInfo* newMovieRecord = new struct movieInfo;
 
     cout << "Enter Movie ID: ";
