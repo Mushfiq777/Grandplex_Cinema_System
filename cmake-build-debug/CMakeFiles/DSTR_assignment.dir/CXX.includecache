@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/mushf/CLionProjects/DSTR_assignment/Bhara.h
+iostream
+-
+cstdlib
+-
+fstream
+-
+string
+-
+sam.h
+C:/Users/mushf/CLionProjects/DSTR_assignment/sam.h
+
 C:/Users/mushf/CLionProjects/DSTR_assignment/Mushfiqur.h
 iostream
 -
@@ -27,6 +39,8 @@ sam.h
 C:/Users/mushf/CLionProjects/DSTR_assignment/sam.h
 Mushfiqur.h
 C:/Users/mushf/CLionProjects/DSTR_assignment/Mushfiqur.h
+Bhara.h
+C:/Users/mushf/CLionProjects/DSTR_assignment/Bhara.h
 
 C:/Users/mushf/CLionProjects/DSTR_assignment/sam.h
 iostream

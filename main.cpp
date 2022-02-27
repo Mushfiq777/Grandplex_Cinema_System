@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include "sam.h"
 #include "Mushfiqur.h"
+#include "Bhara.h"
 using namespace std;
 int main() {
 
@@ -14,9 +15,9 @@ int main() {
     displayMovieRecord();
 //    filter();
 //    searchRecord();
-    update();
+//    update();
     displayMovieRecord();
-// hfdhshfdsah
+    addPurchase();
     return 0;
 }
 

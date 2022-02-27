@@ -4,6 +4,12 @@
 
 #ifndef DSTR_ASSIGNMENT_BHARA_H
 #define DSTR_ASSIGNMENT_BHARA_H
+#include <iostream>
+#include <cstdlib>
+#include <fstream>
+#include <string>
+#include "sam.h"
+using namespace std;
 void addPurchase() {
     struct movieInfo *newPurchase = new struct movieInfo;
     struct movieInfo *checkID;
@@ -48,5 +54,31 @@ void addPurchase() {
 
     newPurchase->next = head; //Big O notation from O(N) become o(1)
     head = newPurchase;
+}
+void PurchaseDetails() {
+    int choice;
+    cout << "Purchase details Menu" << endl
+         << "1. Add Ticket" << endl
+         << "2. View all Purchased Ticket list" << endl
+         << "3. Main Menu" << endl
+         << "Enter you input: ";
+    cin >> choice;
+    cout << endl;
+    switch (choice) {
+        case 1:
+            addPurchase();
+            cout << endl;
+            PurchaseDetails();
+        case 2:
+            cout << "once code done it can be added";
+        case 3:
+
+            displayMovieRecord();
+            cout << endl;
+            PurchaseDetails();
+        default:
+            cout << "Invalid input!\n";
+            PurchaseDetails();
+    }
 }
 #endif //DSTR_ASSIGNMENT_BHARA_H
