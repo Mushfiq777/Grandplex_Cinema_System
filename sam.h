@@ -6,7 +6,7 @@
 #define DSTR_ASSIGNMENT_SAM_H
 #include <iostream>
 #include <cstdlib>
-#include "Mushfiqur.h"
+//#include "Mushfiqur.h"
 using namespace std;
 struct movieInfo { //creates a template for a node
     string mID, mName, mType, mGenre, mHall;
