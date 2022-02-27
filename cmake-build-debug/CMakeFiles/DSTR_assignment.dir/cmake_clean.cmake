@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/DSTR_assignment.dir/main.cpp.obj"
-  "CMakeFiles/DSTR_assignment.dir/main.cpp.obj.d"
   "DSTR_assignment.exe"
   "DSTR_assignment.exe.manifest"
   "DSTR_assignment.pdb"
