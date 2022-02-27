@@ -15,7 +15,7 @@ struct movieInfo { //creates a template for a node
 
 struct movieInfo* head = NULL;
 
-void movieRecord(string mID, string mType, string mName, string mGenre, string mHall, int mPrice, int mQuantity) { //creates new movie record (hardcoded)
+void movieRecord(string mID, string mType, string mName, string mGenre, string mHall, int mPrice, int mQuantity) {
     //adds a new movie record
     struct movieInfo* newMovie = new struct movieInfo;
 
@@ -32,128 +32,6 @@ void movieRecord(string mID, string mType, string mName, string mGenre, string m
 
     //points the head to the MA of the new node created; inserts the node holding new movie info at the beginning of the list
     head = newMovie;
-}
-
-void addNewMovie() { //accepts new movie record from user
-    struct movieInfo* newMovieRecord = new struct movieInfo;
-
-    cout << "Enter Movie ID: ";
-    cin >> newMovieRecord->mID;
-
-    struct movieInfo* check; //transverse to find existing ID
-
-    check = head; //points to the beginning of the LL
-
-    while (check != NULL) { //move through the nodes until the end of the LL
-        if (newMovieRecord->mID == check->mID) { //while looking at all node value, check if value cin = to any existing movie ID
-            cout << "Sorry that movie ID already exists! Please re-enter a valid movie ID: "; //validates whether the movie ID exists or not and if it does, ask the user to re-enter a valid movie ID
-            cin >> newMovieRecord->mID;
-            check = head;
-
-        }
-        else {
-            check = check->next;
-        }
-    }
-
-    cout << "Enter movie name: ";
-    cin >> newMovieRecord->mName;
-    check = head; //points to the beginning of the LL
-
-    while (check != NULL) { //move through the nodes until the end of the LL
-        if (newMovieRecord->mName == check->mName) { //while looking at all node value, check if value cin = to any existing movie name
-            cout << "Sorry that movie name already exists! Please re-enter a valid movie name: "; //validates whether the movie name exists or not and if it does, ask the user to re-enter a valid movie name
-            cin >> newMovieRecord->mName;
-            check = head;
-        }
-        else {
-            check = check->next;
-        }
-    }
-
-    //get movie type and input validation
-    while (true) {
-        string movTyp;
-        cout << "Please enter the movie type [2D/3D]: ";
-        cin >> movTyp;
-        if (movTyp == "2D" || movTyp == "3D") {
-            newMovieRecord->mType = movTyp;
-            break;
-        }
-        else
-        {
-            cout << "Invalid input please enter again";
-        }
-    }
-
-    //get movie genre and input validation
-    while (true) {
-        cout << "Please enter the movie genre [Action/Horror/Comedy/Sci-fi]: ";
-        cin >> newMovieRecord->mGenre;
-
-        if (newMovieRecord->mGenre == "Action" || newMovieRecord->mGenre == "Horror" || newMovieRecord->mGenre == "Comedy" || newMovieRecord->mGenre == "Sci-fi")
-        {
-            break;
-        }
-        else
-        {
-            cout << "Invalid input please enter again";
-        }
-    }
-
-    //get hall number and input validation
-    while (true) {
-        cout << "Please enter the hall number [Hall<hall no.>]: ";
-        cin >> newMovieRecord->mHall;
-
-        if (newMovieRecord->mHall == "Hall1" || newMovieRecord->mHall == "Hall2" || newMovieRecord->mHall == "Hall3" || newMovieRecord->mHall == "Hall4" || newMovieRecord->mHall == "Hall5")
-        {
-            break;
-        }
-        else
-        {
-            cout << "Invalid input please enter again";
-        }
-    }
-
-    //get movie price and input validation
-    while (true) {
-        int y;
-        cout << "Please enter the price in integers: ";
-        cin >> y;
-        if (cin.fail())
-        {
-            cout << "Invalid Input! Please enter again\n";
-        }
-        else
-        {
-            newMovieRecord->mPrice = y;
-            break;
-        }
-    }
-
-    //get available quantity of the movie and input validation
-    while (true)
-    {
-        int x;
-        cout << "Please enter the quantity in integers: ";
-        cin >> x;
-        if (cin.fail())
-        {
-            cout << "Invalid Input! Please enter again\n";
-        }
-        else
-        {
-            newMovieRecord->mQuantity = x;
-            break;
-        }
-    }
-
-    //points the node that holds info of new movie to the same MA of current head; either NULL or first node connected to head
-    newMovieRecord->next = head;
-
-    //points the head to the MA of the new node created; inserts the node holding new movie info at the beginning of the list
-    head = newMovieRecord;
 }
 
 void displayMovieRecord() {
