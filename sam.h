@@ -191,6 +191,4 @@ void displayMovieRecord() {
     }
 }
 
-
-
 #endif //DSTR_ASSIGNMENT_SAM_H
