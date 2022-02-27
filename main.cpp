@@ -13,7 +13,7 @@ int main() {
     movieRecord("0005","3D","Hangover","Comedy","Hall4",10.00,22);
     movieRecord("0006","3D","Spiderman","Action","Hall4",12.00,25);
     displayMovieRecord();
-
+//jh
     addNewMovie();
     displayMovieRecord();
 //    viewPurchase();
