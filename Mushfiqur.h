@@ -243,4 +243,97 @@ void update(){
     }
 }
 
+struct purchaseInfo { //creates a template for a node
+    string pName, pType, pGenre, pHall ,pCname,pDate;
+    int pTotalPrice, pNoTickets;
+    purchaseInfo* next;
+};
+struct purchaseInfo* head2 = NULL;
+void purchaseAdd(){
+    struct purchaseInfo* newPurchase = new struct purchaseInfo;
+    cout << "Please enter your name:";
+    cin >> newPurchase->pCname;
+    cout << "Please enter today's date (dd/mm/yyyy):";
+    cin >> newPurchase->pDate;
+
+
+    bool found = false;
+
+    while(true) {
+        struct movieInfo *check;
+        check = head;
+        cout << "Enter the name of the movie you want to purchase: ";
+        cin >> newPurchase->pName;
+        while (check != NULL) {
+            if (newPurchase->pName == check->mName) {
+                cout << "\nMovie found! \n";
+                cout << "Number of tickets available: "<< check->mQuantity;
+                cout << "\nPlease enter the number of tickets you want to purchase:";
+                cin >> newPurchase->pNoTickets;
+                if (newPurchase->pNoTickets <= check->mQuantity){
+                    newPurchase->pTotalPrice = check->mPrice * newPurchase->pNoTickets;
+                    check->mQuantity = check->mQuantity - newPurchase->pNoTickets;
+                    newPurchase->pName = check->mName;
+                    newPurchase->pType = check->mType;
+                    newPurchase->pGenre = check->mGenre;
+                    newPurchase->pHall = check->mHall;
+                    cout << "Your total price is: "<<newPurchase->pTotalPrice;
+                    cout << "\nThank you for purchasing! \n";
+                    newPurchase->next = head2;
+                    head2 = newPurchase;
+
+                    found = true;
+                    break;
+                }else
+                {
+                    cout << "\nSorry please enter a lower number, enough tickets not available\n";
+                    continue;
+                }
+
+            } else {
+                check = check->next;
+
+            }
+        }
+        if(found==true)
+        {
+            break;
+        }else
+        {
+            cout << "\n Movie not found please enter movie name again\n";
+        }
+    }
+}
+
+void viewPurchase()
+{
+    struct purchaseInfo* display;
+
+    display = head2;
+
+    if (display == NULL) {
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  |                                              NO PURCHASE RECORD FOUND                                     |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+    }else
+    {
+        cout << "\n  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "   | Customer Name |    | Date purchased |    |  Movie Name  |    |  Genre  |    | Type |   | Hall No. |    | Quantity |    | Total Price |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        while (display != NULL) {
+            cout << "  | " << display->pCname <<
+                 " |    | " << display->pDate <<
+                 " |    | " << display->pName <<
+                 " |    | " << display->pGenre <<
+                 " |    | " << display->pType <<
+                 " |    | "     << display->pHall <<
+                 " |    | " << display->pNoTickets << " |   " << "| "<<display->pTotalPrice<<" |" << endl;
+
+            //continue looking for the next node that holds movie info
+            display = display->next;
+        }
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+    }
+}
+
 #endif //DSTR_ASSIGNMENT_MUSHFIQUR_H
