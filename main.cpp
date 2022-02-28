@@ -4,37 +4,38 @@
 #include "Mushfiqur.h"
 #include "Bhara.h"
 using namespace std;
-void showMenu() {
-    cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
-    cout << "  |                                WELCOME TO GRANDPLEX MOVIE TICKETING SYSTEM                                |\n";
-    cout << "  |                                         WHAT WOULD YOU LIKE TO DO?                                        |\n";
-    cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
-    cout << "  |                                      1. Add new movie record                                              |\n";
-    cout << "  |                                      2. Display all available movies                                      |\n";
-    cout << "  |                                      3. Search for movie                                                  |\n";
-    cout << "  |                                      4. Category filter                                                   |\n";
-    cout << "  |                                      5. Update movie record                                               |\n";
-    cout << "  |                                      6. Sort movie record                                                 |\n";
-    cout << "  |                                      7. Delete movie record                                               |\n";
-    cout << "  |                                      8. Add new transaction                                               |\n";
-    cout << "  |                                      9. View transactions                                                 |\n";
-    cout << "  |                                     10. Sort transactions                                                 |\n";
-    cout << "  |                                     11. View details of a transaction                                     |\n";
-    cout << "  |                                     12. Exit                                                              |\n";
-}
 
-void menu() {
+int main() {
 
-    showMenu();
-    cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
-    cout << "  |                                       Please enter your choice below:                                     |\n";
-    int choice;
-    cout << "                                                        ";
-    cin >> choice;
-    cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+    movieRecord("0001", "3D", "Superman", "Action", "Hall1", 20.00, 20);
+    movieRecord("0002", "2D", "Uncharted", "Comedy", "Hall5", 15.00, 25);
+    movieRecord("0003","3D",  "Malignant", "Horror", "Hall2", 20.00, 10);
+    movieRecord("0004", "2D", "Anabella", "Horror", "Hall3", 15.00, 18);
+    movieRecord("0005","3D","Hangover","Comedy","Hall4",10.00,22);
+    movieRecord("0006","3D","Spiderman","Action","Hall4",12.00,25);
 
-    while (choice != 12) {
 
+    while(true)
+    {
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  |                                WELCOME TO GRANDPLEX MOVIE TICKETING SYSTEM                                |\n";
+        cout << "  |                                         WHAT WOULD YOU LIKE TO DO?                                        |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  |                                      1. Add new movie record                                              |\n";
+        cout << "  |                                      2. Display all available movies                                      |\n";
+        cout << "  |                                      3. Search for movie                                                  |\n";
+        cout << "  |                                      4. Category filter                                                   |\n";
+        cout << "  |                                      5. Update movie record                                               |\n";
+        cout << "  |                                      6. Sort movie record                                                 |\n";
+        cout << "  |                                      7. Delete movie record                                               |\n";
+        cout << "  |                                      8. Add new transaction                                               |\n";
+        cout << "  |                                      9. View transactions                                                 |\n";
+        cout << "  |                                     10. Sort transactions                                                 |\n";
+        cout << "  |                                     11. View details of a transaction                                     |\n";
+        cout << "  |                                     12. Exit                                                              |\n";
+        cout << "\nEnter your choice: ";
+        int choice;
+        cin >> choice;
         switch (choice) {
             case 1:
                 displayMovieRecord();
@@ -55,6 +56,7 @@ void menu() {
             case 6:
                 break;
             case 7:
+                deleting();
                 break;
             case 8:
                 purchaseAdd();
@@ -69,30 +71,24 @@ void menu() {
             case 12:
                 break;
             default:
-                cout << "                                               Invalid Selection!" << endl;
+                cout << "Invalid selection \n";
+                break;
         }
-        /*cout << endl;
-        showMenu();
-        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
-        cout << "  |                                       Please enter your choice below:                                     |\n";
-        int choice;
-        cout << "                                                        ";
-        cin >> choice;
-        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";*/
+        if(choice==12)
+        {
+            break;
+        }else
+        {
+            continue;
+        }
     }
-}
-int main() {
 
-    movieRecord("0001", "3D", "Superman", "Action", "Hall1", 20.00, 20);
-    movieRecord("0002", "2D", "Uncharted", "Comedy", "Hall5", 15.00, 25);
-    movieRecord("0003","3D",  "Malignant", "Horror", "Hall2", 20.00, 10);
-    movieRecord("0004", "2D", "Anabella", "Horror", "Hall3", 15.00, 18);
-    movieRecord("0005","3D","Hangover","Comedy","Hall4",10.00,22);
-    movieRecord("0006","3D","Spiderman","Action","Hall4",12.00,25);
-
-
-//    showMenu();
-    menu();
+    //    showMenu();
+//    menu();
+//    displayMovieRecord();
+//    purchaseAdd();
+//    viewPurchase();
+//    displayMovieRecord();
 
 
     return 0;
