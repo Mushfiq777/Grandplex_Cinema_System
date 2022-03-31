@@ -6,19 +6,37 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/mushf/CLionProjects/DSTR_assignment/Bhara.h
+C:/Users/mushf/CLionProjects/DSTR_assignment/f1.h
 iostream
 -
 cstdlib
+-
+iomanip
 -
 fstream
 -
 string
 -
-sam.h
-C:/Users/mushf/CLionProjects/DSTR_assignment/sam.h
+sstream
+-
+stdio.h
+-
+f2.h
+C:/Users/mushf/CLionProjects/DSTR_assignment/f2.h
 
-C:/Users/mushf/CLionProjects/DSTR_assignment/Mushfiqur.h
+C:/Users/mushf/CLionProjects/DSTR_assignment/f2.h
+iostream
+-
+cstdlib
+-
+iomanip
+-
+limits
+-
+sstream
+-
+
+C:/Users/mushf/CLionProjects/DSTR_assignment/f3.h
 iostream
 -
 cstdlib
@@ -27,24 +45,22 @@ fstream
 -
 string
 -
-sam.h
-C:/Users/mushf/CLionProjects/DSTR_assignment/sam.h
+iomanip
+-
+f2.h
+C:/Users/mushf/CLionProjects/DSTR_assignment/f2.h
 
 C:/Users/mushf/CLionProjects/DSTR_assignment/main.cpp
 iostream
 -
-cstdlib
--
-sam.h
-C:/Users/mushf/CLionProjects/DSTR_assignment/sam.h
-Mushfiqur.h
-C:/Users/mushf/CLionProjects/DSTR_assignment/Mushfiqur.h
-Bhara.h
-C:/Users/mushf/CLionProjects/DSTR_assignment/Bhara.h
-
-C:/Users/mushf/CLionProjects/DSTR_assignment/sam.h
-iostream
+iomanip
 -
 cstdlib
 -
+f2.h
+C:/Users/mushf/CLionProjects/DSTR_assignment/f2.h
+f1.h
+C:/Users/mushf/CLionProjects/DSTR_assignment/f1.h
+f3.h
+C:/Users/mushf/CLionProjects/DSTR_assignment/f3.h
 

@@ -2,13 +2,15 @@
 // Created by Mushfiqur on 2/16/2022.
 //
 
-#ifndef DSTR_ASSIGNMENT_BHARA_H
-#define DSTR_ASSIGNMENT_BHARA_H
+#ifndef DSTR_ASSIGNMENT_F3_H
+#define DSTR_ASSIGNMENT_F3_H
 #include <iostream>
 #include <cstdlib>
 #include <fstream>
 #include <string>
-#include "sam.h"
+#include <iomanip>
+
+#include "f2.h"
 using namespace std;
 
 //struct movieInfo
@@ -30,7 +32,7 @@ void deleting()
     else
     {
         cout << "Type the Movie ID that you wish to delete:" << endl;
-        string dID;
+        int dID;
         cin >> dID;
         cout << endl;
         //bool found = false;
@@ -97,4 +99,4 @@ void deleting()
     }
 
 }
-#endif //DSTR_ASSIGNMENT_BHARA_H
+#endif //DSTR_ASSIGNMENT_F3_H

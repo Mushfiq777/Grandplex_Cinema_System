@@ -80,16 +80,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/mushf/CLionProjects/DSTR_assignment/Bhara.h">
+		<Unit filename="C:/Users/mushf/CLionProjects/DSTR_assignment/f1.h">
 			<Option target="DSTR_assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/mushf/CLionProjects/DSTR_assignment/Mushfiqur.h">
+		<Unit filename="C:/Users/mushf/CLionProjects/DSTR_assignment/f2.h">
+			<Option target="DSTR_assignment"/>
+		</Unit>
+		<Unit filename="C:/Users/mushf/CLionProjects/DSTR_assignment/f3.h">
 			<Option target="DSTR_assignment"/>
 		</Unit>
 		<Unit filename="C:/Users/mushf/CLionProjects/DSTR_assignment/main.cpp">
-			<Option target="DSTR_assignment"/>
-		</Unit>
-		<Unit filename="C:/Users/mushf/CLionProjects/DSTR_assignment/sam.h">
 			<Option target="DSTR_assignment"/>
 		</Unit>
 		<Unit filename="C:/Users/mushf/CLionProjects/DSTR_assignment/CMakeLists.txt">

@@ -7,19 +7,25 @@
 
 
 
-#ifndef DSTR_ASSIGNMENT_MUSHFIQUR_H
-#define DSTR_ASSIGNMENT_MUSHFIQUR_H
+#ifndef DSTR_ASSIGNMENT_F1_H
+#define DSTR_ASSIGNMENT_F1_H
 #include <iostream>
 #include <cstdlib>
+#include <iomanip>
 #include <fstream>
 #include <string>
-#include "sam.h"
+#include <sstream>
+#include <stdio.h>
+#include "f2.h"
 using namespace std;
 void searchRecord() {
     cout << "Enter Movie ID OR Name:" << endl;
-    string searchID;
-    cin >> searchID;
-
+    string searchName;
+    cin >> searchName;
+    stringstream ss;
+    ss << searchName;
+    int searchID;
+    ss >> searchID;
     //transverse
      movieInfo* current = head; //create a temp pointer
 
@@ -31,33 +37,37 @@ void searchRecord() {
     bool found = false; //boolean
 
     while (current != NULL) {
-        if (current->mID.compare(searchID) == 0 ) {
+        if (current->mID == searchID ) {
             cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
             cout << "  | Movie ID |    | Type |    |  Movie Name  |    |  Genre  |    | Hall No. |    | Price (RM) |    | Quantity |\n";
             cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
-            cout << "  |   " << current->mID <<
-                 "   |    |  " << current->mType <<
-                 "  |    |  " << current->mName <<
-                 "   |    |  " << current->mGenre <<
-                 " |    |  " << current->mHall <<
-                 "  |    |     "     << current->mPrice <<
-                 "     |    |    " << current->mQuantity << "    |" << endl;
+            cout  << "  |" << setw(7);
+            printf("%04d",current->mID) ;
+            cout <<
+                 "|"<<setw(5)<<"|"  << setw(6) << current->mType <<
+                 "|    |" << setw(14) << current->mName <<
+                 "|    |" << setw(9) << current->mGenre <<
+                 "|    |" << setw(10) << current->mHall <<
+                 "|    |" << setw(12)   << current->mPrice <<
+                 "|    |" << setw(10) << current->mQuantity << "|" << endl;
 
 
             found = true;
             break;	//keep infinite loop
         }
-        else if(current->mName.compare(searchID) == 0){
+        else if(current->mName == searchName){
             cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
             cout << "  | Movie ID |    | Type |    |  Movie Name  |    |  Genre  |    | Hall No. |    | Price (RM) |    | Quantity |\n";
             cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
-            cout << "  |   " << current->mID <<
-                 "   |    |  " << current->mType <<
-                 "  |    |  " << current->mName <<
-                 "   |    |  " << current->mGenre <<
-                 " |    |  " << current->mHall <<
-                 "  |    |     "     << current->mPrice <<
-                 "     |    |    " << current->mQuantity << "    |" << endl;
+            cout  << "  |" << setw(7);
+            printf("%04d",current->mID) ;
+            cout <<
+                 "|"<<setw(5)<<"|"  << setw(6) << current->mType <<
+                 "|    |" << setw(14) << current->mName <<
+                 "|    |" << setw(9) << current->mGenre <<
+                 "|    |" << setw(10) << current->mHall <<
+                 "|    |" << setw(12)   << current->mPrice <<
+                 "|    |" << setw(10) << current->mQuantity << "|" << endl;
             found = true;
             break;
         }
@@ -191,7 +201,7 @@ void filter() {
 
 void update(){
     cout << "Enter the Movie ID of the Movie that you want to update: ";
-    string searchid;
+    int searchid;
     cin >> searchid;
     cout << "\n";
     movieInfo* current = head;
@@ -336,4 +346,4 @@ void viewPurchase()
     }
 }
 
-#endif //DSTR_ASSIGNMENT_MUSHFIQUR_H
+#endif //DSTR_ASSIGNMENT_F1_H

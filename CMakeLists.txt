@@ -3,4 +3,4 @@ project(DSTR_assignment)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(DSTR_assignment main.cpp Bhara.h Mushfiqur.h sam.h)
+add_executable(DSTR_assignment main.cpp f3.h f1.h f2.h)
