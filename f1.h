@@ -113,13 +113,15 @@ void filter() {
                 if (current->mGenre == searchG)
                 {
 
-                    cout << "  |   " << current->mID <<
-                         "   |    |  " << current->mType <<
-                         "  |    |  " << current->mName <<
-                         "   |    |  " << current->mGenre <<
-                         " |    |  " << current->mHall <<
-                         "  |    |     " << current->mPrice <<
-                         "     |    |    " << current->mQuantity << "    |" << endl;
+                    cout  << "  |" << setw(7);
+                    printf("%04d",current->mID) ;
+                    cout <<
+                         "|"<<setw(5)<<"|"  << setw(6) << current->mType <<
+                         "|    |" << setw(14) << current->mName <<
+                         "|    |" << setw(9) << current->mGenre <<
+                         "|    |" << setw(10) << current->mHall <<
+                         "|    |" << setw(12)   << current->mPrice <<
+                         "|    |" << setw(10) << current->mQuantity << "|" << endl;
                     Found = true;
                     current = current->next;
 
@@ -163,13 +165,15 @@ void filter() {
                         if (current->mType == searchD)
                         {
 
-                            cout << "  |   " << current->mID <<
-                                 "   |    |  " << current->mType <<
-                                 "  |    |  " << current->mName <<
-                                 "   |    |  " << current->mGenre <<
-                                 " |    |  " << current->mHall <<
-                                 "  |    |     " << current->mPrice <<
-                                 "     |    |    " << current->mQuantity << "    |" << endl;
+                            cout  << "  |" << setw(7);
+                            printf("%04d",current->mID) ;
+                            cout <<
+                                 "|"<<setw(5)<<"|"  << setw(6) << current->mType <<
+                                 "|    |" << setw(14) << current->mName <<
+                                 "|    |" << setw(9) << current->mGenre <<
+                                 "|    |" << setw(10) << current->mHall <<
+                                 "|    |" << setw(12)   << current->mPrice <<
+                                 "|    |" << setw(10) << current->mQuantity << "|" << endl;
                             Found = true;
                             current = current->next;
 
@@ -220,13 +224,15 @@ void update(){
             cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
             cout << "  | Movie ID |    | Type |    |  Movie Name  |    |  Genre  |    | Hall No. |    | Price (RM) |    | Quantity |\n";
             cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
-            cout << "  |   " << current->mID <<
-                 "   |    |  " << current->mType <<
-                 "  |    |  " << current->mName <<
-                 "   |    |  " << current->mGenre <<
-                 " |    |  " << current->mHall <<
-                 "  |    |     "     << current->mPrice <<
-                 "     |    |    " << current->mQuantity << "    |" << endl;
+            cout  << "  |" << setw(7);
+            printf("%04d",current->mID) ;
+            cout <<
+                 "|"<<setw(5)<<"|"  << setw(6) << current->mType <<
+                 "|    |" << setw(14) << current->mName <<
+                 "|    |" << setw(9) << current->mGenre <<
+                 "|    |" << setw(10) << current->mHall <<
+                 "|    |" << setw(12)   << current->mPrice <<
+                 "|    |" << setw(10) << current->mQuantity << "|" << endl;
             found = true;
             cout << "Enter updated price: ";
             int updateP;
