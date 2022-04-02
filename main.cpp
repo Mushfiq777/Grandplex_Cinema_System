@@ -1,6 +1,8 @@
 #include <iostream>
 #include <iomanip>
 #include <cstdlib>
+#include <limits>
+#include <sstream>
 #include "f2.h"
 #include "f1.h"
 #include "f3.h"
@@ -31,33 +33,211 @@ void showMenu()
         cin >> choice;
         cout <<endl;
         switch (choice) {
-            case 1:
-                displayMovieRecord();
-                addNewMovie();
+            case 1: {
+                bool t = true;
+                do
+                {
+                    displayMovieRecord();
+                    addNewMovie();
+                    cout << "Continue to main menu (press 1) or add another movie(press 2)?\nEnter choice: ";
+                    int c;
+                    cin >> c;
+                    cout << endl;
+                    switch(c)
+                    {
+                        case 1:
+                            t= false;
+                            break;
+
+                        case 2:
+                            break;
+                        default:
+                            cout << "Invalid selection please input again!\n";
+                            cout << "Continue to main menu (press 1) or add another movie(press 2)?\nEnter choice: ";
+                            cin >> c;
+                            cout << endl;
+                    }
+                }while(t);
+            }
+
+
                 break;
-            case 2:
-                displayMovieRecord();
+            case 2: {
+                bool t = true;
+                do {
+                    displayMovieRecord();
+                    cout << "Continue to main menu (press 1) or display again?(press 2)?\nEnter choice: ";
+                    int c;
+                    cin >> c;
+                    cout << endl;
+                    switch (c) {
+                        case 1:
+                            t = false;
+                            break;
+
+                        case 2:
+                            break;
+                        default:
+                            cout << "Invalid selection please input again!\n";
+                            cout << "Continue to main menu (press 1) or display again?(press 2)?\nEnter choice: ";
+                            cin >> c;
+                            cout << endl;
+                    }
+                } while (t);
+            }
                 break;
             case 3:
-                searchRecord();
+            {
+                bool t = true;
+                do {
+                    searchRecord();
+                    cout << "Continue to main menu (press 1) or search again?(press 2)?\nEnter choice: ";
+                    int c;
+                    cin >> c;
+                    cout << endl;
+                    switch (c) {
+                        case 1:
+                            t = false;
+                            break;
+
+                        case 2:
+                            break;
+                        default:
+                            cout << "Invalid selection please input again!\n";
+                            cout << "Continue to main menu (press 1) or search again?(press 2)?\nEnter choice: ";
+                            cin >> c;
+                            cout << endl;
+                    }
+                } while (t);
                 break;
+            }
             case 4:
-                filter();
+            {
+                bool t = true;
+                do {
+                    filter();
+                    cout << "Continue to main menu (press 1) or filter again?(press 2)?\nEnter choice: ";
+                    int c;
+                    cin >> c;
+                    cout << endl;
+                    switch (c) {
+                        case 1:
+                            t = false;
+                            break;
+
+                        case 2:
+                            break;
+                        default:
+                            cout << "Invalid selection please input again!\n";
+                            cout << "Continue to main menu (press 1) or filter again?(press 2)?\nEnter choice: ";
+                            cin >> c;
+                            cout << endl;
+                    }
+                } while (t);
                 break;
+            }
             case 5:
-                update();
+            {
+                bool t = true;
+                do {
+                    update();
+                    cout << "Continue to main menu (press 1) or update again?(press 2)?\nEnter choice: ";
+                    int c;
+                    cin >> c;
+                    cout << endl;
+                    switch (c) {
+                        case 1:
+                            t = false;
+                            break;
+
+                        case 2:
+                            break;
+                        default:
+                            cout << "Invalid selection please input again!\n";
+                            cout << "Continue to main menu (press 1) or update again?(press 2)?\nEnter choice: ";
+                            cin >> c;
+                            cout << endl;
+                    }
+                } while (t);
                 break;
+            }
             case 6:
                 break;
             case 7:
-                deleting();
+            {
+                bool t = true;
+                do {
+                    deleting();
+                    cout << "Continue to main menu (press 1) or delete again?(press 2)?\nEnter choice: ";
+                    int c;
+                    cin >> c;
+                    cout << endl;
+                    switch (c) {
+                        case 1:
+                            t = false;
+                            break;
+
+                        case 2:
+                            break;
+                        default:
+                            cout << "Invalid selection please input again!\n";
+                            cout << "Continue to main menu (press 1) or delete again?(press 2)?\nEnter choice: ";
+                            cin >> c;
+                            cout << endl;
+                    }
+                } while (t);
                 break;
+            }
             case 8:
-                purchaseAdd();
+            {
+                bool t = true;
+                do {
+                    purchaseAdd();
+                    cout << "Continue to main menu (press 1) or add another purchase?(press 2)?\nEnter choice: ";
+                    int c;
+                    cin >> c;
+                    cout << endl;
+                    switch (c) {
+                        case 1:
+                            t = false;
+                            break;
+
+                        case 2:
+                            break;
+                        default:
+                            cout << "Invalid selection please input again!\n";
+                            cout << "Continue to main menu (press 1) or add another purchase?(press 2)?\nEnter choice: ";
+                            cin >> c;
+                            cout << endl;
+                    }
+                } while (t);
                 break;
+            }
             case 9:
-                viewPurchase();
+            {
+                bool t = true;
+                do {
+                    viewPurchase();
+                    cout << "Continue to main menu (press 1) or view purchases again?(press 2)?\nEnter choice: ";
+                    int c;
+                    cin >> c;
+                    cout << endl;
+                    switch (c) {
+                        case 1:
+                            t = false;
+                            break;
+
+                        case 2:
+                            break;
+                        default:
+                            cout << "Invalid selection please input again!\n";
+                            cout << "Continue to main menu (press 1) or view purchases again?(press 2)?\nEnter choice: ";
+                            cin >> c;
+                            cout << endl;
+                    }
+                } while (t);
                 break;
+            }
             case 10:
                 break;
             case 11:
@@ -66,14 +246,13 @@ void showMenu()
                 break;
             default:
                 cout << "Invalid selection \n";
+                cin.clear();
+                cin.ignore(numeric_limits<streamsize>::max(),'\n');
                 break;
         }
         if(choice==12)
         {
             break;
-        }else
-        {
-            continue;
         }
     }
 
