@@ -51,5 +51,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/DSTR_assignment.dir/DependInfo.cmake"
+  "CMakeFiles/Grandplex_Cinema_System.dir/DependInfo.cmake"
   )

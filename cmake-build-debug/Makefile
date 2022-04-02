@@ -116,24 +116,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named DSTR_assignment
+# Target rules for targets named Grandplex_Cinema_System
 
 # Build rule for target.
-DSTR_assignment: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 DSTR_assignment
-.PHONY : DSTR_assignment
+Grandplex_Cinema_System: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Grandplex_Cinema_System
+.PHONY : Grandplex_Cinema_System
 
 # fast build rule for target.
-DSTR_assignment/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DSTR_assignment.dir\build.make CMakeFiles/DSTR_assignment.dir/build
-.PHONY : DSTR_assignment/fast
+Grandplex_Cinema_System/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Grandplex_Cinema_System.dir\build.make CMakeFiles/Grandplex_Cinema_System.dir/build
+.PHONY : Grandplex_Cinema_System/fast
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DSTR_assignment.dir\build.make CMakeFiles/DSTR_assignment.dir/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Grandplex_Cinema_System.dir\build.make CMakeFiles/Grandplex_Cinema_System.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -141,7 +141,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DSTR_assignment.dir\build.make CMakeFiles/DSTR_assignment.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Grandplex_Cinema_System.dir\build.make CMakeFiles/Grandplex_Cinema_System.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -149,7 +149,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DSTR_assignment.dir\build.make CMakeFiles/DSTR_assignment.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Grandplex_Cinema_System.dir\build.make CMakeFiles/Grandplex_Cinema_System.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -160,7 +160,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... DSTR_assignment
+	@echo ... Grandplex_Cinema_System
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

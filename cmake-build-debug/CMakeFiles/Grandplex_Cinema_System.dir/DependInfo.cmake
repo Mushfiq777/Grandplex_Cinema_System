@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/mushf/CLionProjects/Grandplex_Cinema_System/main.cpp" "C:/Users/mushf/CLionProjects/Grandplex_Cinema_System/cmake-build-debug/CMakeFiles/DSTR_assignment.dir/main.cpp.obj"
+  "C:/Users/mushf/CLionProjects/Grandplex_Cinema_System/main.cpp" "C:/Users/mushf/CLionProjects/Grandplex_Cinema_System/cmake-build-debug/CMakeFiles/Grandplex_Cinema_System.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
