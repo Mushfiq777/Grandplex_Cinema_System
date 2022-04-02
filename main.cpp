@@ -86,12 +86,6 @@ int main() {
         }
     }
 
-    //    showMenu();
-//    menu();
-//    displayMovieRecord();
-//    purchaseAdd();
-//    viewPurchase();
-//    displayMovieRecord();
 
 
     return 0;

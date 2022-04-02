@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/mushf/CLionProjects/DSTR_assignment/f1.h
+C:/Users/mushf/CLionProjects/Grandplex_Cinema_System/f1.h
 iostream
 -
 cstdlib
@@ -22,9 +22,9 @@ sstream
 stdio.h
 -
 f2.h
-C:/Users/mushf/CLionProjects/DSTR_assignment/f2.h
+C:/Users/mushf/CLionProjects/Grandplex_Cinema_System/f2.h
 
-C:/Users/mushf/CLionProjects/DSTR_assignment/f2.h
+C:/Users/mushf/CLionProjects/Grandplex_Cinema_System/f2.h
 iostream
 -
 cstdlib
@@ -36,7 +36,7 @@ limits
 sstream
 -
 
-C:/Users/mushf/CLionProjects/DSTR_assignment/f3.h
+C:/Users/mushf/CLionProjects/Grandplex_Cinema_System/f3.h
 iostream
 -
 cstdlib
@@ -48,9 +48,9 @@ string
 iomanip
 -
 f2.h
-C:/Users/mushf/CLionProjects/DSTR_assignment/f2.h
+C:/Users/mushf/CLionProjects/Grandplex_Cinema_System/f2.h
 
-C:/Users/mushf/CLionProjects/DSTR_assignment/main.cpp
+C:/Users/mushf/CLionProjects/Grandplex_Cinema_System/main.cpp
 iostream
 -
 iomanip
@@ -58,9 +58,9 @@ iomanip
 cstdlib
 -
 f2.h
-C:/Users/mushf/CLionProjects/DSTR_assignment/f2.h
+C:/Users/mushf/CLionProjects/Grandplex_Cinema_System/f2.h
 f1.h
-C:/Users/mushf/CLionProjects/DSTR_assignment/f1.h
+C:/Users/mushf/CLionProjects/Grandplex_Cinema_System/f1.h
 f3.h
-C:/Users/mushf/CLionProjects/DSTR_assignment/f3.h
+C:/Users/mushf/CLionProjects/Grandplex_Cinema_System/f3.h
 

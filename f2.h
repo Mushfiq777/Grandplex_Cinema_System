@@ -41,18 +41,15 @@ void movieRecord(int mID, string mType, string mName, string mGenre, string mHal
 }
 
 void addNewMovie() { //accepts new movie record from user
+
     struct movieInfo* newMovieRecord = new struct movieInfo;
     struct movieInfo* check; //transverse to find existing ID
-
     check = head; //points to the beginning of the LL
-    while(true){
-//        cin.ignore();
 
+    while(true){
         cout << "Enter Movie ID: ";
         cin >> newMovieRecord->mID;
-//        getline(cin,newMovieRecord->mID);
         cout << endl;
-
 
         if(!cin.fail())
         {
@@ -62,7 +59,6 @@ void addNewMovie() { //accepts new movie record from user
                     cout << "Sorry that movie ID already exists! Please re-enter a valid movie ID: "; //validates whether the movie ID exists or not and if it does, ask the user to re-enter a valid movie ID
                     cin >> newMovieRecord->mID;
                     check = head;
-
                 }
                 else {
                     check = check->next;
@@ -70,21 +66,13 @@ void addNewMovie() { //accepts new movie record from user
             }
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
             break;
         }else
         {
             cout << "Invalid input try again\n";
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
         }
-
-
-
-
-
-
     }
 
 
