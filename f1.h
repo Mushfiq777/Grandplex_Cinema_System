@@ -7,8 +7,8 @@
 
 
 
-#ifndef DSTR_ASSIGNMENT_F1_H
-#define DSTR_ASSIGNMENT_F1_H
+#ifndef Grandplex_Cinema_System_F1_H
+#define Grandplex_Cinema_System_F1_H
 #include <iostream>
 #include <cstdlib>
 #include <iomanip>
@@ -352,4 +352,4 @@ void viewPurchase()
     }
 }
 
-#endif //DSTR_ASSIGNMENT_F1_H
+#endif

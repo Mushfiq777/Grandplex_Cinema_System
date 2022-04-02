@@ -2,8 +2,8 @@
 // Created by Mushfiqur on 2/16/2022.
 //
 
-#ifndef DSTR_ASSIGNMENT_F3_H
-#define DSTR_ASSIGNMENT_F3_H
+#ifndef Grandplex_Cinema_System_F3_H
+#define Grandplex_Cinema_System_F3_H
 #include <iostream>
 #include <cstdlib>
 #include <fstream>
@@ -99,4 +99,4 @@ void deleting()
     }
 
 }
-#endif //DSTR_ASSIGNMENT_F3_H
+#endif //Grandplex_Cinema_System_F3_H

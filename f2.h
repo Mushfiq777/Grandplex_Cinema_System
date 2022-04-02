@@ -2,8 +2,8 @@
 // Created by Mushfiqur on 2/21/2022.
 //
 
-#ifndef DSTR_ASSIGNMENT_F2_H
-#define DSTR_ASSIGNMENT_F2_H
+#ifndef Grandplex_Cinema_System_F2_H
+#define Grandplex_Cinema_System_F2_H
 #include <iostream>
 #include <cstdlib>
 #include <iomanip>
@@ -234,4 +234,4 @@ void displayMovieRecord() {
     }
 }
 
-#endif //DSTR_ASSIGNMENT_F2_H
+#endif //Grandplex_Cinema_System_F2_H
