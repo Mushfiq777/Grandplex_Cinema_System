@@ -5,17 +5,8 @@
 #include "f1.h"
 #include "f3.h"
 using namespace std;
-
-int main() {
-
-    movieRecord(0001, "3D", "Superman", "Action", "Hall1", 20.00, 20);
-    movieRecord(0002, "2D", "Uncharted", "Comedy", "Hall5", 15.00, 25);
-    movieRecord(0003,"3D",  "Malignant", "Horror", "Hall2", 20.00, 10);
-    movieRecord(00047, "2D", "Anabella", "Horror", "Hall3", 15.00, 18);
-    movieRecord(005,"3D","Hangover","Comedy","Hall4",10.00,22);
-    movieRecord(0006,"3D","Spiderman","Action","Hall4",12.00,25);
-
-
+void showMenu()
+{
     while(true)
     {
         cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
@@ -87,6 +78,19 @@ int main() {
     }
 
 
+
+}
+int main() {
+
+    movieRecord(0001, "3D", "Superman", "Action", "Hall1", 20.00, 20);
+    movieRecord(0002, "2D", "Uncharted", "Comedy", "Hall5", 15.00, 25);
+    movieRecord(0003,"3D",  "Malignant", "Horror", "Hall2", 20.00, 10);
+    movieRecord(00047, "2D", "Anabella", "Horror", "Hall3", 15.00, 18);
+    movieRecord(005,"3D","Hangover","Comedy","Hall4",10.00,22);
+    movieRecord(0006,"3D","Spiderman","Action","Hall4",12.00,25);
+
+
+    showMenu();
 
     return 0;
 }
