@@ -31,7 +31,7 @@ void searchRecord() {
 
     if (current == NULL) {
         cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
-        cout << "  |                                              NO MOVIES AVAILABLE IN THE SYSTEM                                              |\n";
+        cout << "  |                                              NO MOVIES AVAILABLE IN THE SYSTEM                            |\n";
         cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
     }
     bool found = false; //boolean
