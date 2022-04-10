@@ -266,11 +266,16 @@ int main() {
     movieRecord(0003,"3D",  "Malignant", "Horror", "Hall2", 20.00, 10);
     movieRecord(000455, "2D", "Anabella", "Horror", "Hall3", 15.00, 18);
     movieRecord(015,"3D","Hangover","Comedy","Hall4",10.00,22);
-    movieRecord(0006,"3D","Spiderman","Action","Hall4",12.00,25);
+    movieRecord(00062,"3D","Spiderman","Action","Hall4",12.00,25);
 
 
-    showMenu();
-
+//    showMenu();
+    string x = "023";
+    stringstream ss;
+    ss << x;
+    int y;
+    ss >> y;
+    cout << y;
     return 0;
 }
 
