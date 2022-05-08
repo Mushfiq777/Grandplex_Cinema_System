@@ -95,7 +95,7 @@ void filter() {
     cin >> choice1;
     if (choice1 == 1) {
         cout << "Which genre do you want to filter by?\n"
-                "Enter genre: "<<endl;
+                "Enter genre [Action/Horror/Comedy/Sci-fi]: "<<endl;
         string searchG;
         cin >> searchG;
         if (current == NULL) {

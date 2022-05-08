@@ -33,13 +33,14 @@ void deleting()
     else
     {
         cout << "Type the Movie ID or name that you wish to delete:" << endl;
-        int dID;
-        cin >> dID;
+        string dName;
+
+        cin >> dName;
         cout << endl;
         stringstream ss;
-        ss << dID;
-        string dName;
-        ss >> dName;
+        ss << dName;
+        int dID;
+        ss >> dID;
 
         while (current != NULL) {
             if(head->mID==dID || head->mName == dName)
@@ -69,10 +70,12 @@ void deleting()
                     first = first->next;
                     delete head;
                     head = first;
+
+                    cout << "\nMovie ID No."<< current->mID <<" and name "<< current->mName<<" got deleted successfully.";
                 }else if(choice == 'N' || choice == 'n')
                 {
                     cout << "Record not deleted\n";
-//                    break;
+                    break;
                 }else{
                     cout << "Invalid input\n";
                     continue;
@@ -103,11 +106,13 @@ void deleting()
                     movieInfo* todelete = current->next;
                     current->next = todelete->next;
                     delete todelete;
+                    cout << "\nMovie ID No."<< current->mID <<" and name "<< current->mName<<" got deleted successfully.";
+
                 }
                 else if(choice == 'N' || choice == 'n')
                 {
                     cout << "Record not deleted\n";
-//                    break;
+                    break;
                 }
                 else {
                     cout << "Invalid input\n";
@@ -116,28 +121,6 @@ void deleting()
             }else {
                 current = current->next;
             }
-                // !input.is_open()
-//            else if (current->next->mID == dID) {
-//                cout << "Deleting the movie data with the ID" << dID << ".\nAre you 100% sure? [Y/N]\n";
-//                char choice;
-//                cout << "Enter input:";
-//                cin >> choice;
-//
-//                if (choice == 'Y' || choice == 'y') {
-//                    movieInfo* before = current;
-//                    movieInfo* deletiing = current->next;
-//                    before->next = deletiing->next;
-//                    delete deletiing;
-//                    found = true;
-//                    cout << "\nDeleted " << dID << " successfully.\n";
-//                    break;
-//                }
-//                else {
-//                    cout << "Data not deleted successfully \n";
-//                }
-//                found = true;
-//                break;
-//            }
 
         }
         if (!found) {

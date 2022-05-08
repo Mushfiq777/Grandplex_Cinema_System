@@ -261,22 +261,16 @@ void showMenu()
 }
 int main() {
 
-    movieRecord(0001, "3D", "Superman", "Action", "Hall1", 20.00, 20);
-    movieRecord(267, "2D", "Uncharted", "Comedy", "Hall5", 15.00, 25);
-    movieRecord(0003,"3D",  "Malignant", "Horror", "Hall2", 20.00, 10);
-    movieRecord(000455, "2D", "Anabella", "Horror", "Hall3", 15.00, 18);
-    movieRecord(015,"3D","Hangover","Comedy","Hall4",10.00,22);
-    movieRecord(00062,"3D","Spiderman","Action","Hall4",12.00,25);
+    movieRecord(1000, "3D", "Superman", "Action", "Hall1", 20.00, 20);
+    movieRecord(2267, "2D", "Uncharted", "Comedy", "Hall5", 15.00, 25);
+    movieRecord(3333,"3D",  "Malignant", "Horror", "Hall2", 20.00, 10);
+    movieRecord(4557, "2D", "Anabella", "Horror", "Hall3", 15.00, 18);
+    movieRecord(1555,"3D","Hangover","Comedy","Hall4",10.00,22);
+    movieRecord(62,"3D","Spiderman","Action","Hall4",12.00,25);
 
 
-//    showMenu();
-    string x = "023";
-    stringstream ss;
-    ss << x;
-    int y;
-    ss >> y;
-    cout << y;
-    return 0;
+    showMenu();
+
 }
 
 
