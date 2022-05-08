@@ -61,17 +61,21 @@ void deleting()
                      "|    |" << setw(10) << current->mQuantity << "|" << endl;
                 cout <<"Are you sure you want to delete the record? [Y/N]\n";
                 cout << "Enter input:";
+
                 char choice;
                 cin >> choice;
                 cout << endl;
                 found = true;
+                string named = current->mName;
                 if (choice == 'Y' || choice == 'y') {
-                    movieInfo *first = head;
-                    first = first->next;
-                    delete head;
-                    head = first;
 
-                    cout << "\nMovie ID No."<< current->mID <<" and name "<< current->mName<<" got deleted successfully.";
+                    movieInfo *first = head;
+                    head = head->next;
+                    delete first;
+
+                    cout << "\nMovie ID No."<< current->mID <<" and name "<< named<<" got deleted successfully.\n";
+
+                    break;
                 }else if(choice == 'N' || choice == 'n')
                 {
                     cout << "Record not deleted\n";
@@ -80,7 +84,7 @@ void deleting()
                     cout << "Invalid input\n";
                     continue;
                 }
-            }else if (current->mID == dID || current->mName == dName) {
+            }else if(current->next == NULL && (current->mID == dID || current->mName == dName)){
                 cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
                 cout << "  |                                              MOVIE FOUND!                                                 |\n";
                 cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
@@ -101,13 +105,62 @@ void deleting()
                 cin >> choice;
                 cout << endl;
                 found = true;
+                string named = current->mName;
 
                 if (choice == 'Y' || choice == 'y') {
-                    movieInfo* todelete = current->next;
-                    current->next = todelete->next;
-                    delete todelete;
-                    cout << "\nMovie ID No."<< current->mID <<" and name "<< current->mName<<" got deleted successfully.";
+                    movieInfo* prev = head;
+                    while (prev->next->next != NULL)
+                    {
+                        prev = prev->next;
 
+                    }
+                    delete prev->next;
+                    prev->next = NULL;
+
+                    cout << "\nMovie ID No."<< current->mID <<" and name "<< named<<" got deleted successfully.\n";
+                    break;
+                }
+                else if(choice == 'N' || choice == 'n')
+                {
+                    cout << "Record not deleted\n";
+                    break;
+                }
+                else {
+                    cout << "Invalid input\n";
+                    continue;
+                }
+            }else if (current->next != NULL && (current->next->mID == dID || current->next->mName == dName)) {
+                cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+                cout << "  |                                              MOVIE FOUND!                                                 |\n";
+                cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+                cout << "  | Movie ID |    | Type |    |  Movie Name  |    |  Genre  |    | Hall No. |    | Price (RM) |    | Quantity |\n";
+                cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+                cout  << "  |" << setw(7);
+                printf("%04d",current->next->mID) ;
+                cout <<
+                     "|"<<setw(5)<<"|"  << setw(6) << current->next->mType <<
+                     "|    |" << setw(14) << current->next->mName <<
+                     "|    |" << setw(9) << current->next->mGenre <<
+                     "|    |" << setw(10) << current->next->mHall <<
+                     "|    |" << setw(12)   << current->next->mPrice <<
+                     "|    |" << setw(10) << current->next->mQuantity << "|" << endl;
+                cout <<"Are you sure you want to delete the record? [Y/N]\n";
+                cout << "Enter input:";
+                char choice;
+                cin >> choice;
+                cout << endl;
+                found = true;
+                string named = current->next->mName;
+                int mId = current->next->mID;
+                if (choice == 'Y' || choice == 'y') {
+                    movieInfo* prev = NULL;
+                    movieInfo* todelete = head;
+                    prev = current;
+                    todelete = current->next;
+                    prev->next = todelete->next;
+                    delete todelete;
+                    cout << "\nMovie ID No."<< mId <<" and name "<< named<<" got deleted successfully.\n";
+                    break;
                 }
                 else if(choice == 'N' || choice == 'n')
                 {
