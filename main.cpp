@@ -359,15 +359,7 @@ int main() {
 
 
     showMenu();
-//    sortMQD();
-//    string d = "Ava";
-//    string b = "bob";
-//    int l = d.compare(b);
-//    if (l > 0){
-//        cout << "Ava"
-//                "\nbob";
-//
-//    }
+
 
 
 
