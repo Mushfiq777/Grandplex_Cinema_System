@@ -193,8 +193,32 @@ void showMenu()
                         if (ch == 1) {
                             sortMA();
                             break;
-                        }else if (ch == 2){
+                        }else if(ch == 2){
                             sortMD();
+                            break;
+                        }else if(ch == 3) {
+                            sortMNA();
+                            break;
+                        }else if(ch == 4) {
+                            sortMND();
+                            break;
+                        }else if(ch == 5) {
+                            sortMHA();
+                            break;
+                        }else if(ch == 6) {
+                            sortMHD();
+                            break;
+                        }else if(ch == 7) {
+                            sortMPA();
+                            break;
+                        }else if(ch == 8) {
+                            sortMPD();
+                            break;
+                        }else if(ch == 9) {
+                            sortMQA();
+                            break;
+                        }else if(ch == 10) {
+                            sortMQD();
                             break;
                         }else{
                             cout<< "Invalid input please try again\n";
@@ -334,8 +358,8 @@ int main() {
     movieRecord(62,"3D","Spiderman","Action","Hall4",12.00,25);
 
 
-//    showMenu();
-    sortMQD();
+    showMenu();
+//    sortMQD();
 //    string d = "Ava";
 //    string b = "bob";
 //    int l = d.compare(b);
