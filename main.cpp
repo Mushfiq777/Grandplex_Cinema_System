@@ -22,11 +22,11 @@ void showMenu()
         cout << "  |                                      5. Update movie record                                               |\n";
         cout << "  |                                      6. Sort movie record                                                 |\n";
         cout << "  |                                      7. Delete movie record                                               |\n";
-        cout << "  |                                      8. Add new transaction                                               |\n";
-        cout << "  |                                      9. View transactions                                                 |\n";
-        cout << "  |                                     10. Sort transactions                                                 |\n";
-        cout << "  |                                     11. View details of a transaction                                     |\n";
-        cout << "  |                                     12. Exit                                                              |\n";
+//        cout << "  |                                      8. Add new transaction                                               |\n";
+//        cout << "  |                                      9. View transactions                                                 |\n";
+//        cout << "  |                                     10. Sort transactions                                                 |\n";
+//        cout << "  |                                     11. View details of a transaction                                     |\n";
+        cout << "  |                                      8. Exit                                                              |\n";
         cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
         cout << "\nEnter your choice: ";
         int choice;
@@ -273,65 +273,65 @@ void showMenu()
                 }
                 break;
             }
+//            case 8:
+//            {
+//                bool t = true;
+//                while (t) {
+//                    purchaseAdd();
+//                    cout << "Continue to main menu (press 1) or add another purchase?(press 2)?\nEnter choice: ";
+//                    int c;
+//                    cin >> c;
+//                    cout << endl;
+//                    while(true){
+//                        if(c==1){
+//                            t= false;
+//                            break;
+//                        }else if(c==2)
+//                        {
+//                            break;
+//                        }else
+//                        {
+//                            cout << "Invalid selection please input again!\n";
+//                            cout << "Continue to main menu (press 1) or add another purchase?(press 2)?\nEnter choice: ";
+//                            cin >> c;
+//                            cout << endl;
+//                        }
+//                    }
+//                }
+//                break;
+//            }
+//            case 9:
+//            {
+//                bool t = true;
+//                while (t) {
+//                    viewPurchase();
+//                    cout << "Continue to main menu (press 1) or view purchases again?(press 2)?\nEnter choice: ";
+//                    int c;
+//                    cin >> c;
+//                    cout << endl;
+//                    while(true){
+//                        if(c==1){
+//                            t= false;
+//                            break;
+//                        }else if(c==2)
+//                        {
+//                            break;
+//                        }else
+//                        {
+//                            cout << "Invalid selection please input again!\n";
+//                            cout << "Continue to main menu (press 1) or view purchases again?(press 2)?\nEnter choice: ";
+//                            cin >> c;
+//                            cout << endl;
+//                        }
+//                    }
+//                }
+//                break;
+//            }
+//            case 10:
+//                break;
+//            case 11:
+//                break;
             case 8:
-            {
-                bool t = true;
-                while (t) {
-                    purchaseAdd();
-                    cout << "Continue to main menu (press 1) or add another purchase?(press 2)?\nEnter choice: ";
-                    int c;
-                    cin >> c;
-                    cout << endl;
-                    while(true){
-                        if(c==1){
-                            t= false;
-                            break;
-                        }else if(c==2)
-                        {
-                            break;
-                        }else
-                        {
-                            cout << "Invalid selection please input again!\n";
-                            cout << "Continue to main menu (press 1) or add another purchase?(press 2)?\nEnter choice: ";
-                            cin >> c;
-                            cout << endl;
-                        }
-                    }
-                }
-                break;
-            }
-            case 9:
-            {
-                bool t = true;
-                while (t) {
-                    viewPurchase();
-                    cout << "Continue to main menu (press 1) or view purchases again?(press 2)?\nEnter choice: ";
-                    int c;
-                    cin >> c;
-                    cout << endl;
-                    while(true){
-                        if(c==1){
-                            t= false;
-                            break;
-                        }else if(c==2)
-                        {
-                            break;
-                        }else
-                        {
-                            cout << "Invalid selection please input again!\n";
-                            cout << "Continue to main menu (press 1) or view purchases again?(press 2)?\nEnter choice: ";
-                            cin >> c;
-                            cout << endl;
-                        }
-                    }
-                }
-                break;
-            }
-            case 10:
-                break;
-            case 11:
-                break;
-            case 12:
                 break;
             default:
                 cout << "Invalid selection \n";
@@ -339,7 +339,7 @@ void showMenu()
                 cin.ignore(numeric_limits<streamsize>::max(),'\n');
                 break;
         }
-        if(choice==12)
+        if(choice==8)
         {
             break;
         }
