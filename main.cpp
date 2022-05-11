@@ -171,7 +171,56 @@ void showMenu()
                 }
                 break;
             }
-            case 6:
+            case 6: {
+                bool t = true;
+                while (t) {
+
+                    while(true) {
+                        cout << "Sort in: \n"
+                                "1.Ascending order of Movie ID\n"
+                                "2.Descending order of Movie ID\n"
+                                "3.Ascending order of Movie Name\n"
+                                "4.Descending order of Movie Name\n"
+                                "5.Ascending order of Hall No.\n"
+                                "6.Descending order of Hall No.\n"
+                                "7.Ascending order of Movie Price\n"
+                                "8.Descending order of Movie Price\n"
+                                "9.Ascending order of Movie Quantity\n"
+                                "10.Descending order of Movie Quantity\n"
+                                "Enter choice: ";
+                        int ch ;
+                        cin >> ch;
+                        if (ch == 1) {
+                            sortMA();
+                            break;
+                        }else if (ch == 2){
+                            sortMD();
+                            break;
+                        }else{
+                            cout<< "Invalid input please try again\n";
+
+                        }
+
+                    }
+                    cout << "Continue to main menu (press 1) or sort again?(press 2)?\nEnter choice: ";
+                    int c;
+                    cin >> c;
+                    cout << endl;
+                    while (true) {
+                        if (c == 1) {
+                            t = false;
+                            break;
+                        } else if (c == 2) {
+                            break;
+                        } else {
+                            cout << "Invalid selection please input again!\n";
+                            cout << "Continue to main menu (press 1) or sort again?(press 2)?\nEnter choice: ";
+                            cin >> c;
+                            cout << endl;
+                        }
+                    }
+                }
+            }
                 break;
             case 7:
             {
@@ -285,7 +334,18 @@ int main() {
     movieRecord(62,"3D","Spiderman","Action","Hall4",12.00,25);
 
 
-    showMenu();
+//    showMenu();
+    sortMQD();
+//    string d = "Ava";
+//    string b = "bob";
+//    int l = d.compare(b);
+//    if (l > 0){
+//        cout << "Ava"
+//                "\nbob";
+//
+//    }
+
+
 
 }
 

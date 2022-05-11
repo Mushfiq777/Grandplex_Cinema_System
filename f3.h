@@ -10,16 +10,10 @@
 #include <string>
 #include <iomanip>
 #include <sstream>
+#include <cstring>
 
 #include "f2.h"
 using namespace std;
-
-//struct movieInfo
-//{
-//    string mid;
-//    movieInfo* base;
-//};
-//struct movieInfo* head = NULL;
 
 void deleting()
 {
@@ -185,5 +179,715 @@ void deleting()
         }
     }
 
+}
+
+void sortMA(){
+    movieInfo* current = head, *index = NULL;
+    int tempID, tempPrice, tempQ;
+    string tempName, tempType, tempGenre, tempHall;
+
+
+    if (head==NULL){
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  |                                              NO MOVIES AVAILABLE IN THE SYSTEM                            |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+    }else
+    {
+
+        while(current != NULL){
+            index = current->next;
+
+            while(index != NULL){
+                if(current->mID > index->mID){
+                    tempID = index->mID;
+                    tempName = index->mName;
+                    tempGenre = index->mGenre;
+                    tempHall = index->mHall;
+                    tempPrice = index->mPrice;
+                    tempQ = index->mQuantity;
+                    tempType = index->mType;
+                    /***************/
+                    index->mID = current->mID;
+                    index->mName = current->mName;
+                    index->mType = current->mType;
+                    index->mGenre = current->mGenre;
+                    index->mQuantity = current->mQuantity;
+                    index->mHall = current->mHall;
+                    index->mPrice = current->mPrice;
+                    /**************/
+                    current->mID = tempID ;
+                    current->mName = tempName;
+                    current->mPrice = tempPrice;
+                    current->mQuantity = tempQ;
+                    current->mHall = tempHall;
+                    current->mGenre = tempGenre;
+                    current->mType = tempType;
+                }
+                index = index->next;
+            }
+            current = current->next;
+        }
+        current = head;
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  |                                               NOW SHOWING                                                 |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  | Movie ID |    | Type |    |  Movie Name  |    |  Genre  |    | Hall No. |    | Price (RM) |    | Quantity |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        while(current != NULL){
+            cout  << "  |" << setw(7);
+            printf("%04d",current->mID) ;
+            cout <<
+                 "|"<<setw(5)<<"|"  << setw(6) << current->mType <<
+                 "|    |" << setw(14) << current->mName <<
+                 "|    |" << setw(9) << current->mGenre <<
+                 "|    |" << setw(10) << current->mHall <<
+                 "|    |" << setw(12)   << current->mPrice <<
+                 "|    |" << setw(10) << current->mQuantity << "|" << endl;
+            current = current->next;
+
+        }
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+
+    }
+}
+
+void sortMD(){
+    movieInfo* current = head, *index = NULL;
+    int tempID, tempPrice, tempQ;
+    string tempName, tempType, tempGenre, tempHall;
+
+    if (head==NULL){
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  |                                              NO MOVIES AVAILABLE IN THE SYSTEM                            |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+    }else
+    {
+
+        while(current != NULL){
+            index = current->next;
+
+            while(index != NULL){
+                if(current->mID < index->mID){
+                    tempID = index->mID;
+                    tempName = index->mName;
+                    tempGenre = index->mGenre;
+                    tempHall = index->mHall;
+                    tempPrice = index->mPrice;
+                    tempQ = index->mQuantity;
+                    tempType = index->mType;
+                    /***************/
+                    index->mID = current->mID;
+                    index->mName = current->mName;
+                    index->mType = current->mType;
+                    index->mGenre = current->mGenre;
+                    index->mQuantity = current->mQuantity;
+                    index->mHall = current->mHall;
+                    index->mPrice = current->mPrice;
+                    /**************/
+                    current->mID = tempID ;
+                    current->mName = tempName;
+                    current->mPrice = tempPrice;
+                    current->mQuantity = tempQ;
+                    current->mHall = tempHall;
+                    current->mGenre = tempGenre;
+                    current->mType = tempType;
+
+                }
+                index = index->next;
+            }
+            current = current->next;
+        }
+        current = head;
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  |                                               NOW SHOWING                                                 |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  | Movie ID |    | Type |    |  Movie Name  |    |  Genre  |    | Hall No. |    | Price (RM) |    | Quantity |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        while(current != NULL){
+            cout  << "  |" << setw(7);
+            printf("%04d",current->mID) ;
+            cout <<
+                 "|"<<setw(5)<<"|"  << setw(6) << current->mType <<
+                 "|    |" << setw(14) << current->mName <<
+                 "|    |" << setw(9) << current->mGenre <<
+                 "|    |" << setw(10) << current->mHall <<
+                 "|    |" << setw(12)   << current->mPrice <<
+                 "|    |" << setw(10) << current->mQuantity << "|" << endl;
+            current = current->next;
+
+        }
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+
+    }
+}
+
+void sortMPA(){
+    movieInfo* current = head, *index = NULL;
+    int tempID, tempPrice, tempQ;
+    string tempName, tempType, tempGenre, tempHall;
+
+
+    if (head==NULL){
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  |                                              NO MOVIES AVAILABLE IN THE SYSTEM                            |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+    }else
+    {
+
+        while(current != NULL){
+            index = current->next;
+
+            while(index != NULL){
+                if(current->mPrice > index->mPrice){
+                    tempID = index->mID;
+                    tempName = index->mName;
+                    tempGenre = index->mGenre;
+                    tempHall = index->mHall;
+                    tempPrice = index->mPrice;
+                    tempQ = index->mQuantity;
+                    tempType = index->mType;
+                    /***************/
+                    index->mID = current->mID;
+                    index->mName = current->mName;
+                    index->mType = current->mType;
+                    index->mGenre = current->mGenre;
+                    index->mQuantity = current->mQuantity;
+                    index->mHall = current->mHall;
+                    index->mPrice = current->mPrice;
+                    /**************/
+                    current->mID = tempID ;
+                    current->mName = tempName;
+                    current->mPrice = tempPrice;
+                    current->mQuantity = tempQ;
+                    current->mHall = tempHall;
+                    current->mGenre = tempGenre;
+                    current->mType = tempType;
+                }
+                index = index->next;
+            }
+            current = current->next;
+        }
+        current = head;
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  |                                               NOW SHOWING                                                 |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  | Movie ID |    | Type |    |  Movie Name  |    |  Genre  |    | Hall No. |    | Price (RM) |    | Quantity |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        while(current != NULL){
+            cout  << "  |" << setw(7);
+            printf("%04d",current->mID) ;
+            cout <<
+                 "|"<<setw(5)<<"|"  << setw(6) << current->mType <<
+                 "|    |" << setw(14) << current->mName <<
+                 "|    |" << setw(9) << current->mGenre <<
+                 "|    |" << setw(10) << current->mHall <<
+                 "|    |" << setw(12)   << current->mPrice <<
+                 "|    |" << setw(10) << current->mQuantity << "|" << endl;
+            current = current->next;
+
+        }
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+
+    }
+}
+
+void sortMPD(){
+    movieInfo* current = head, *index = NULL;
+    int tempID, tempPrice, tempQ;
+    string tempName, tempType, tempGenre, tempHall;
+
+
+    if (head==NULL){
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  |                                              NO MOVIES AVAILABLE IN THE SYSTEM                            |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+    }else
+    {
+
+        while(current != NULL){
+            index = current->next;
+
+            while(index != NULL){
+                if(current->mPrice < index->mPrice){
+                    tempID = index->mID;
+                    tempName = index->mName;
+                    tempGenre = index->mGenre;
+                    tempHall = index->mHall;
+                    tempPrice = index->mPrice;
+                    tempQ = index->mQuantity;
+                    tempType = index->mType;
+                    /***************/
+                    index->mID = current->mID;
+                    index->mName = current->mName;
+                    index->mType = current->mType;
+                    index->mGenre = current->mGenre;
+                    index->mQuantity = current->mQuantity;
+                    index->mHall = current->mHall;
+                    index->mPrice = current->mPrice;
+                    /**************/
+                    current->mID = tempID ;
+                    current->mName = tempName;
+                    current->mPrice = tempPrice;
+                    current->mQuantity = tempQ;
+                    current->mHall = tempHall;
+                    current->mGenre = tempGenre;
+                    current->mType = tempType;
+                }
+                index = index->next;
+            }
+            current = current->next;
+        }
+        current = head;
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  |                                               NOW SHOWING                                                 |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  | Movie ID |    | Type |    |  Movie Name  |    |  Genre  |    | Hall No. |    | Price (RM) |    | Quantity |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        while(current != NULL){
+            cout  << "  |" << setw(7);
+            printf("%04d",current->mID) ;
+            cout <<
+                 "|"<<setw(5)<<"|"  << setw(6) << current->mType <<
+                 "|    |" << setw(14) << current->mName <<
+                 "|    |" << setw(9) << current->mGenre <<
+                 "|    |" << setw(10) << current->mHall <<
+                 "|    |" << setw(12)   << current->mPrice <<
+                 "|    |" << setw(10) << current->mQuantity << "|" << endl;
+            current = current->next;
+
+        }
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+
+    }
+}
+
+void sortMQA(){
+    movieInfo* current = head, *index = NULL;
+    int tempID, tempPrice, tempQ;
+    string tempName, tempType, tempGenre, tempHall;
+
+
+    if (head==NULL){
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  |                                              NO MOVIES AVAILABLE IN THE SYSTEM                            |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+    }else
+    {
+
+        while(current != NULL){
+            index = current->next;
+
+            while(index != NULL){
+                if(current->mQuantity > index->mQuantity){
+                    tempID = index->mID;
+                    tempName = index->mName;
+                    tempGenre = index->mGenre;
+                    tempHall = index->mHall;
+                    tempPrice = index->mPrice;
+                    tempQ = index->mQuantity;
+                    tempType = index->mType;
+                    /***************/
+                    index->mID = current->mID;
+                    index->mName = current->mName;
+                    index->mType = current->mType;
+                    index->mGenre = current->mGenre;
+                    index->mQuantity = current->mQuantity;
+                    index->mHall = current->mHall;
+                    index->mPrice = current->mPrice;
+                    /**************/
+                    current->mID = tempID ;
+                    current->mName = tempName;
+                    current->mPrice = tempPrice;
+                    current->mQuantity = tempQ;
+                    current->mHall = tempHall;
+                    current->mGenre = tempGenre;
+                    current->mType = tempType;
+                }
+                index = index->next;
+            }
+            current = current->next;
+        }
+        current = head;
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  |                                               NOW SHOWING                                                 |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  | Movie ID |    | Type |    |  Movie Name  |    |  Genre  |    | Hall No. |    | Price (RM) |    | Quantity |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        while(current != NULL){
+            cout  << "  |" << setw(7);
+            printf("%04d",current->mID) ;
+            cout <<
+                 "|"<<setw(5)<<"|"  << setw(6) << current->mType <<
+                 "|    |" << setw(14) << current->mName <<
+                 "|    |" << setw(9) << current->mGenre <<
+                 "|    |" << setw(10) << current->mHall <<
+                 "|    |" << setw(12)   << current->mPrice <<
+                 "|    |" << setw(10) << current->mQuantity << "|" << endl;
+            current = current->next;
+
+        }
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+
+    }
+}
+
+void sortMQD(){
+    movieInfo* current = head, *index = NULL;
+    int tempID, tempPrice, tempQ;
+    string tempName, tempType, tempGenre, tempHall;
+
+
+    if (head==NULL){
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  |                                              NO MOVIES AVAILABLE IN THE SYSTEM                            |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+    }else
+    {
+
+        while(current != NULL){
+            index = current->next;
+
+            while(index != NULL){
+                if(current->mQuantity < index->mQuantity){
+                    tempID = index->mID;
+                    tempName = index->mName;
+                    tempGenre = index->mGenre;
+                    tempHall = index->mHall;
+                    tempPrice = index->mPrice;
+                    tempQ = index->mQuantity;
+                    tempType = index->mType;
+                    /***************/
+                    index->mID = current->mID;
+                    index->mName = current->mName;
+                    index->mType = current->mType;
+                    index->mGenre = current->mGenre;
+                    index->mQuantity = current->mQuantity;
+                    index->mHall = current->mHall;
+                    index->mPrice = current->mPrice;
+                    /**************/
+                    current->mID = tempID ;
+                    current->mName = tempName;
+                    current->mPrice = tempPrice;
+                    current->mQuantity = tempQ;
+                    current->mHall = tempHall;
+                    current->mGenre = tempGenre;
+                    current->mType = tempType;
+                }
+                index = index->next;
+            }
+            current = current->next;
+        }
+        current = head;
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  |                                               NOW SHOWING                                                 |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  | Movie ID |    | Type |    |  Movie Name  |    |  Genre  |    | Hall No. |    | Price (RM) |    | Quantity |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        while(current != NULL){
+            cout  << "  |" << setw(7);
+            printf("%04d",current->mID) ;
+            cout <<
+                 "|"<<setw(5)<<"|"  << setw(6) << current->mType <<
+                 "|    |" << setw(14) << current->mName <<
+                 "|    |" << setw(9) << current->mGenre <<
+                 "|    |" << setw(10) << current->mHall <<
+                 "|    |" << setw(12)   << current->mPrice <<
+                 "|    |" << setw(10) << current->mQuantity << "|" << endl;
+            current = current->next;
+
+        }
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+
+    }
+}
+
+
+void sortMNA(){
+    movieInfo* current = head, *index = NULL;
+    int tempID, tempPrice, tempQ;
+    string tempName, tempType, tempGenre, tempHall;
+
+
+    if (head==NULL){
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  |                                              NO MOVIES AVAILABLE IN THE SYSTEM                            |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+    }else
+    {
+
+        while(current != NULL){
+            index = current->next;
+
+            while(index != NULL){
+                const char *c = current->mName.c_str();
+                const char *i = index->mName.c_str();
+                int result = strcmp(i,c);
+                if(result < 0){
+                    tempID = index->mID;
+                    tempName = index->mName;
+                    tempGenre = index->mGenre;
+                    tempHall = index->mHall;
+                    tempPrice = index->mPrice;
+                    tempQ = index->mQuantity;
+                    tempType = index->mType;
+                    /***************/
+                    index->mID = current->mID;
+                    index->mName = current->mName;
+                    index->mType = current->mType;
+                    index->mGenre = current->mGenre;
+                    index->mQuantity = current->mQuantity;
+                    index->mHall = current->mHall;
+                    index->mPrice = current->mPrice;
+                    /**************/
+                    current->mID = tempID ;
+                    current->mName = tempName;
+                    current->mPrice = tempPrice;
+                    current->mQuantity = tempQ;
+                    current->mHall = tempHall;
+                    current->mGenre = tempGenre;
+                    current->mType = tempType;
+                }
+                index = index->next;
+            }
+            current = current->next;
+        }
+        current = head;
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  |                                               NOW SHOWING                                                 |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  | Movie ID |    | Type |    |  Movie Name  |    |  Genre  |    | Hall No. |    | Price (RM) |    | Quantity |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        while(current != NULL){
+            cout  << "  |" << setw(7);
+            printf("%04d",current->mID) ;
+            cout <<
+                 "|"<<setw(5)<<"|"  << setw(6) << current->mType <<
+                 "|    |" << setw(14) << current->mName <<
+                 "|    |" << setw(9) << current->mGenre <<
+                 "|    |" << setw(10) << current->mHall <<
+                 "|    |" << setw(12)   << current->mPrice <<
+                 "|    |" << setw(10) << current->mQuantity << "|" << endl;
+            current = current->next;
+
+        }
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+
+    }
+}
+void sortMND(){
+    movieInfo* current = head, *index = NULL;
+    int tempID, tempPrice, tempQ;
+    string tempName, tempType, tempGenre, tempHall;
+
+
+    if (head==NULL){
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  |                                              NO MOVIES AVAILABLE IN THE SYSTEM                            |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+    }else
+    {
+
+        while(current != NULL){
+            index = current->next;
+
+            while(index != NULL){
+                const char *c = current->mName.c_str();
+                const char *i = index->mName.c_str();
+                int result = strcmp(i,c);
+                if(result > 0){
+                    tempID = index->mID;
+                    tempName = index->mName;
+                    tempGenre = index->mGenre;
+                    tempHall = index->mHall;
+                    tempPrice = index->mPrice;
+                    tempQ = index->mQuantity;
+                    tempType = index->mType;
+                    /***************/
+                    index->mID = current->mID;
+                    index->mName = current->mName;
+                    index->mType = current->mType;
+                    index->mGenre = current->mGenre;
+                    index->mQuantity = current->mQuantity;
+                    index->mHall = current->mHall;
+                    index->mPrice = current->mPrice;
+                    /**************/
+                    current->mID = tempID ;
+                    current->mName = tempName;
+                    current->mPrice = tempPrice;
+                    current->mQuantity = tempQ;
+                    current->mHall = tempHall;
+                    current->mGenre = tempGenre;
+                    current->mType = tempType;
+                }
+                index = index->next;
+            }
+            current = current->next;
+        }
+        current = head;
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  |                                               NOW SHOWING                                                 |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  | Movie ID |    | Type |    |  Movie Name  |    |  Genre  |    | Hall No. |    | Price (RM) |    | Quantity |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        while(current != NULL){
+            cout  << "  |" << setw(7);
+            printf("%04d",current->mID) ;
+            cout <<
+                 "|"<<setw(5)<<"|"  << setw(6) << current->mType <<
+                 "|    |" << setw(14) << current->mName <<
+                 "|    |" << setw(9) << current->mGenre <<
+                 "|    |" << setw(10) << current->mHall <<
+                 "|    |" << setw(12)   << current->mPrice <<
+                 "|    |" << setw(10) << current->mQuantity << "|" << endl;
+            current = current->next;
+
+        }
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+
+    }
+}
+void sortMHA(){
+    movieInfo* current = head, *index = NULL;
+    int tempID, tempPrice, tempQ;
+    string tempName, tempType, tempGenre, tempHall;
+
+
+    if (head==NULL){
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  |                                              NO MOVIES AVAILABLE IN THE SYSTEM                            |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+    }else
+    {
+
+        while(current != NULL){
+            index = current->next;
+
+            while(index != NULL){
+                const char *c = current->mHall.c_str();
+                const char *i = index->mHall.c_str();
+                int result = strcmp(i,c);
+                if(result < 0){
+                    tempID = index->mID;
+                    tempName = index->mName;
+                    tempGenre = index->mGenre;
+                    tempHall = index->mHall;
+                    tempPrice = index->mPrice;
+                    tempQ = index->mQuantity;
+                    tempType = index->mType;
+                    /***************/
+                    index->mID = current->mID;
+                    index->mName = current->mName;
+                    index->mType = current->mType;
+                    index->mGenre = current->mGenre;
+                    index->mQuantity = current->mQuantity;
+                    index->mHall = current->mHall;
+                    index->mPrice = current->mPrice;
+                    /**************/
+                    current->mID = tempID ;
+                    current->mName = tempName;
+                    current->mPrice = tempPrice;
+                    current->mQuantity = tempQ;
+                    current->mHall = tempHall;
+                    current->mGenre = tempGenre;
+                    current->mType = tempType;
+                }
+                index = index->next;
+            }
+            current = current->next;
+        }
+        current = head;
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  |                                               NOW SHOWING                                                 |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  | Movie ID |    | Type |    |  Movie Name  |    |  Genre  |    | Hall No. |    | Price (RM) |    | Quantity |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        while(current != NULL){
+            cout  << "  |" << setw(7);
+            printf("%04d",current->mID) ;
+            cout <<
+                 "|"<<setw(5)<<"|"  << setw(6) << current->mType <<
+                 "|    |" << setw(14) << current->mName <<
+                 "|    |" << setw(9) << current->mGenre <<
+                 "|    |" << setw(10) << current->mHall <<
+                 "|    |" << setw(12)   << current->mPrice <<
+                 "|    |" << setw(10) << current->mQuantity << "|" << endl;
+            current = current->next;
+
+        }
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+
+    }
+}
+void sortMHD(){
+    movieInfo* current = head, *index = NULL;
+    int tempID, tempPrice, tempQ;
+    string tempName, tempType, tempGenre, tempHall;
+
+
+    if (head==NULL){
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  |                                              NO MOVIES AVAILABLE IN THE SYSTEM                            |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+    }else
+    {
+
+        while(current != NULL){
+            index = current->next;
+
+            while(index != NULL){
+                const char *c = current->mHall.c_str();
+                const char *i = index->mHall.c_str();
+                int result = strcmp(i,c);
+                if(result > 0){
+                    tempID = index->mID;
+                    tempName = index->mName;
+                    tempGenre = index->mGenre;
+                    tempHall = index->mHall;
+                    tempPrice = index->mPrice;
+                    tempQ = index->mQuantity;
+                    tempType = index->mType;
+                    /***************/
+                    index->mID = current->mID;
+                    index->mName = current->mName;
+                    index->mType = current->mType;
+                    index->mGenre = current->mGenre;
+                    index->mQuantity = current->mQuantity;
+                    index->mHall = current->mHall;
+                    index->mPrice = current->mPrice;
+                    /**************/
+                    current->mID = tempID ;
+                    current->mName = tempName;
+                    current->mPrice = tempPrice;
+                    current->mQuantity = tempQ;
+                    current->mHall = tempHall;
+                    current->mGenre = tempGenre;
+                    current->mType = tempType;
+                }
+                index = index->next;
+            }
+            current = current->next;
+        }
+        current = head;
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  |                                               NOW SHOWING                                                 |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        cout << "  | Movie ID |    | Type |    |  Movie Name  |    |  Genre  |    | Hall No. |    | Price (RM) |    | Quantity |\n";
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+        while(current != NULL){
+            cout  << "  |" << setw(7);
+            printf("%04d",current->mID) ;
+            cout <<
+                 "|"<<setw(5)<<"|"  << setw(6) << current->mType <<
+                 "|    |" << setw(14) << current->mName <<
+                 "|    |" << setw(9) << current->mGenre <<
+                 "|    |" << setw(10) << current->mHall <<
+                 "|    |" << setw(12)   << current->mPrice <<
+                 "|    |" << setw(10) << current->mQuantity << "|" << endl;
+            current = current->next;
+
+        }
+        cout << "  +-----------------------------------------------------------------------------------------------------------+\n";
+
+    }
 }
 #endif //Grandplex_Cinema_System_F3_H

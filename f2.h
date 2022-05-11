@@ -14,7 +14,8 @@
 using namespace std;
 
 struct movieInfo { //creates a template for a node
-    string  mName, mType, mGenre, mHall;
+    string mType, mGenre, mHall;
+    string mName;
     int mID, mPrice, mQuantity;
     movieInfo* next;
 };
